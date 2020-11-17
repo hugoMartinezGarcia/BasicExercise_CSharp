@@ -13,7 +13,7 @@ public class Average
         double sum = 0, number,  numberCount = 0, average;
         string numberText;
     
-        Console.Write("Insert a mark: ");
+        Console.Write("Insert a mark (\"end\" to end): ");
         numberText = Console.ReadLine(); 
         
         while(numberText != "end")
@@ -22,7 +22,7 @@ public class Average
             numberCount++;   
             sum += number;
     
-            Console.Write("Insert a mark: ");
+            Console.Write("Insert a mark (\"end\" to end): ");
             numberText = Console.ReadLine();
         }
     
