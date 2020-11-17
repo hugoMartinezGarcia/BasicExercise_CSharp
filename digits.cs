@@ -10,28 +10,29 @@ class Digits
 {
     static void Main()
     {
-        int a = 0, b = 0, c = 0, d = 0;
+        int oneDigit = 0, twoDigits = 0, threeDigits = 0, moreDigits = 0;
 
-        Console.Write("Insert a number: ");
-        string e = Console.ReadLine();
+        Console.WriteLine("Insert numbers (\"end\" to end): ");
+        string numberText = Console.ReadLine();
 
-        while(e!="end")
+        while(numberText != "end")
         {
-            int input = Convert.ToInt32(e);
+            int number = Convert.ToInt32(numberText);
        
-            if(input != 0)
+            if(number != 0)
             {
-                if(input/10 == 0)
-                    a ++;
-                else if (input/100 == 0)
-                    b ++;
-                else if (input/1000 == 0)
-                    c ++;  // the number has 3 digits
+                if(number / 10 == 0)
+                    oneDigit ++;
+                else if (number / 100 == 0)
+                    twoDigits ++;
+                else if (number / 1000 == 0)
+                    threeDigits ++;
                 else
-                    d++;  // the number has more than 3 digits
+                    moreDigits++;
             }
-            e = Console.ReadLine();
+            numberText = Console.ReadLine();
         }
-        Console.WriteLine("one: {0} two: {1} three: {2} more: {3}", a, b, c, d); 
+        Console.WriteLine("one: {0} two: {1} three: {2} more: {3}", 
+            oneDigit, twoDigits, threeDigits, moreDigits); 
     }
 }
